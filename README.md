@@ -5,6 +5,5 @@
 
 <br>
 <hr>
-<br>
 
 ![Screenshot_1](https://github.com/Luiz-HQ/Login-Interface/assets/127171558/b981b1e9-fbd8-4450-9edf-fd9e42397031)
