@@ -2,8 +2,5 @@
 <p>foram criadas usando SHADCN e TAILWIND CSS</p>
 
 ![facebook-login](https://github.com/Luiz-HQ/Login-Interface/assets/127171558/ce037ce9-f49b-47dc-be46-543092613c37)
-
-<br>
-<hr>
-
+-----------------------------------------------------------------------------------------------------------------------
 ![Screenshot_1](https://github.com/Luiz-HQ/Login-Interface/assets/127171558/b981b1e9-fbd8-4450-9edf-fd9e42397031)
