@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator";
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem  } from '../components/ui/dropdown-menu'
+
 
 import image1 from "../assets/image1.svg"
 import image2 from "../assets/image2.svg"
@@ -32,7 +34,7 @@ export function SignIn() {
                     </Carousel> 
                 </div>
                 <section className="flex items-center justify-center bg-background h-full max-w-3xl w-full p-4">
-                    <Card className="w-full max-w-md">
+                    <Card className="w-full max-w-md ml-20">
                         <CardHeader>
                             <CardTitle className="text-2xl font-bold tracking-tighter">
                                 Entre em sua conta
@@ -62,6 +64,20 @@ export function SignIn() {
                             <p className="text-muted-foreground text-center text-sm">Ao entrar na nossa plataforma você concorda com nossos Termos de Uso e Política de Privacidade.</p>
                         </CardFooter>
                     </Card>
+
+                    <div className="h-screen max-w-20 w-screen flex justify-end items-start ml-15 pt-2">
+                        <DropdownMenu>
+                            <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+                                <DropdownMenuContent>
+                                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                                    <DropdownMenuSeparator />
+                                    <DropdownMenuItem>Profile</DropdownMenuItem>
+                                    <DropdownMenuItem>Billing</DropdownMenuItem>
+                                    <DropdownMenuItem>Team</DropdownMenuItem>
+                                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
                 </section>
             </main>
         </>
