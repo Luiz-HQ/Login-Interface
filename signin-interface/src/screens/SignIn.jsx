@@ -6,26 +6,31 @@ import { Separator } from "@/components/ui/separator";
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem  } from '../components/ui/dropdown-menu'
-
+import { ThemeProviderContext } from "@/components/themeProvider";
+import { useContext } from "react"
 
 import image1 from "../assets/image1.svg"
 import image2 from "../assets/image2.svg"
+import darkmode from "../assets/darkmode.png"
 
 export function SignIn() {
+
+    const themeContext = useContext(ThemeProviderContext)
+
     return (
         <>
             <main className='h-screen flex w-full'>
-                <div className="bg-primary-foreground w-full h-full flex p-16">
+                <div className="w-full h-full flex p-16">
                     <Carousel className="w-full max-w-xl">
                         <CarouselContent>
                             <CarouselItem>   
-                                <div className="flex items-center justify-center aspect-square rounded p-8">
-                                    <img src={image1} alt="imagem celular e tecnologia" />
+                                <div className="flex items-center justify-center aspect-square rounded">
+                                    <img src={image1} width="518px" alt="imagem celular e tecnologia" />
                                 </div>
                             </CarouselItem> 
                             <CarouselItem>   
                                 <div className="flex items-center justify-center aspect-square rounded p-8">
-                                    <img src={image2} alt="imagem de tecnologia" />
+                                    <img src={image2} width="518px" alt="imagem de tecnologia" />
                                 </div>
                             </CarouselItem> 
                         </CarouselContent>    
@@ -67,14 +72,13 @@ export function SignIn() {
 
                     <div className="h-screen max-w-20 w-screen flex justify-end items-start ml-15 pt-2">
                         <DropdownMenu>
-                            <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+                            <DropdownMenuTrigger><img style={{ filter: themeContext.theme == "dark" ? "invert(1)": "invert(0)" }} src={darkmode} alt="icone darkmode" width="32px"/></DropdownMenuTrigger>
                                 <DropdownMenuContent>
-                                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                                    <DropdownMenuLabel>Temas</DropdownMenuLabel>
                                     <DropdownMenuSeparator />
-                                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                                    <DropdownMenuItem>Billing</DropdownMenuItem>
-                                    <DropdownMenuItem>Team</DropdownMenuItem>
-                                    <DropdownMenuItem>Subscription</DropdownMenuItem>
+                                    <DropdownMenuItem className="cursor-pointer" onClick={() => themeContext.setTheme("default")}>Default</DropdownMenuItem>
+                                    <DropdownMenuItem className="cursor-pointer" onClick={() => themeContext.setTheme("dark")}>Dark</DropdownMenuItem>
+                                    <DropdownMenuItem className="cursor-pointer" onClick={() => themeContext.setTheme("system")} >System</DropdownMenuItem>
                                 </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
