@@ -1,5 +1,5 @@
 <h1>Aqui estão prints das telas de login que criei:</h1>
-<p>foram criadas usando SHADCN e TAILWIND CSS</p>
+<p>foram criadas usando REACT, SHADCN e TAILWIND CSS</p>
 
 ![facebook-login](https://github.com/Luiz-HQ/Login-Interface/assets/127171558/ce037ce9-f49b-47dc-be46-543092613c37)
 -----------------------------------------------------------------------------------------------------------------------
